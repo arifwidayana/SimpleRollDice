@@ -1,6 +1,7 @@
 package com.arifwidayana.rolldice
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.arifwidayana.rolldice.databinding.ActivityMainBinding
@@ -10,6 +11,7 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         const val MAX = 6
+        private const val TAG = "MESSAGE"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +20,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         pickDice()
+        logging()
+    }
+
+    private fun logging() {
+        Log.d(TAG,"You Getting Me!")
     }
 
     private fun pickDice() {
